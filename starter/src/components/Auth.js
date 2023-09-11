@@ -11,6 +11,14 @@ const Auth = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     
+    let body = {username, password}
+
+    axios.post(register ? '/register' : '/login', body)
+      .then(res => {
+        dispatch({type: 'LOGIN', payload: res.data });
+      })
+      .catch(err => console.error(err));
+
     console.log("submitHandler called");
   };
 

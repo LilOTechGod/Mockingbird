@@ -1,8 +1,8 @@
 {
   "name": "mini-social-mountain",
   "version": "0.1.0",
-  "main": "server/index.js", 
-  "proxy": "http://localhost:4005",
+  "main": "server/server.js", 
+  "proxy": "http://127.0.0.1:4004",
   "nodemonConfig": {
     "ext": "js,sql",
     "ignore": [

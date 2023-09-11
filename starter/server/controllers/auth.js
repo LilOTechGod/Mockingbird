@@ -64,7 +64,7 @@ module.exports = {
     },
     register: async (req, res) => {
         try{
-            let [username, password] = req.body;
+            let {username, password} = req.body;
             // find one is sequelize method and the object adds a WHERE clause to our query and looks for usernames matching the one coming from req.body.
             let foundUser = await User.findOne({WHERE: {username: username}})
             // if foundUser is true, that means we already have a user with that name in the database.

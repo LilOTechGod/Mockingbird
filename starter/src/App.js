@@ -20,7 +20,7 @@ return (
         <Route path='/' element={<Home/>}/>
         <Route path='/auth' element={!state.token ? <Auth/> : <Navigate to='/'/> }/>
         <Route path='/form' element={state.token ? <Form/> : <Navigate to='/auth'/> }/>
-        <Route path='/profile' element={state.token ? <Profile/> : <Navigate to='/auth'/> }/>
+        <Route path='/profile' element={state.token ? <Profile/> : <Navigate to='/'/> }/>
         <Route path='*' element={<Navigate to='/'/>}/>
       </Routes>
     </div>
